@@ -1,0 +1,46 @@
+BIA BARROS — PRODUÇÃO DE ESTRADA
+Aplicativo web para publicar no GitHub Pages
+
+ARQUIVOS
+index.html (página inicial)
+app.js (funcionalidades)
+style.css (aparência preta e laranja)
+logo.png (logo da Bia Barros com fundo transparente)
+icon.png, icon-512.png (ícones do aplicativo)
+manifest.webmanifest e sw.js (instalação e uso com cache)
+
+COMO PUBLICAR NO GITHUB PAGES
+1. Crie um repositório novo no GitHub e deixe como Public.
+2. Abra o ZIP e extraia TODOS os arquivos. Não envie apenas o ZIP ao repositório.
+3. No repositório, escolha Add file > Upload files.
+4. Selecione TODOS os arquivos extraídos, diretamente na raiz (mesmo nível do index.html), e confirme em Commit changes.
+5. Entre em Settings > Pages.
+6. Em Build and deployment: Deploy from a branch; branch main; pasta /(root). Salve.
+7. O GitHub Pages mostrará o endereço onde o aplicativo foi publicado.
+
+PARA USAR NO IPHONE
+Abra o endereço do site no Safari e use Compartilhar > Adicionar à Tela de Início.
+
+O QUE FUNCIONA
+- Agenda de shows com data, cidade, estado, local, endereço e horários.
+- Contatos fixos de Mimi e Ju e contatos de locadora / cerimonial por evento.
+- WhatsApp direto quando o telefone estiver cadastrado.
+- Checklist editável por show: 7 dias, 3 dias, véspera e dia do evento.
+- Cronograma da equipe editável e compartilhável por WhatsApp.
+- Upload, consulta e remoção de PDFs de riders por evento.
+- Exportação de compromissos/lembretes em arquivo .ics para Calendário.
+- Backup completo de dados e PDFs em arquivo JSON, e importação desse backup.
+- Visual preto e laranja, com logo sem fundo, sem módulo financeiro.
+
+IMPORTANTE
+- Os dados e PDFs ficam salvos localmente no navegador/aparelho usado.
+  Não há conta de usuário nem sincronização na nuvem nesta versão.
+- Limpar os dados do Safari ou trocar de celular pode apagar informações.
+  Faça backup regularmente na aba Ajustes e backup.
+- As notificações NÃO são enviadas automaticamente em segundo plano.
+  Para receber alertas, exporte o arquivo .ics do show, importe no
+  Calendário do iPhone e mantenha as notificações do Calendário ativadas.
+- A publicação no GitHub Pages exige um repositório com os arquivos do site.
+- Para visualizar tudo funcionando, use um servidor HTTPS (GitHub Pages).
+
+VERSÃO: primeira versão funcional para publicação / 18-11-2026
