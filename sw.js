@@ -1,4 +1,4 @@
-const VERSION='bia-barros-producao-v1';
+const VERSION='bia-barros-producao-sync-v4';
 const BASE=self.registration.scope;
 const FILES=['./','./index.html','./app.js','./style.css','./logo.png','./icon.png','./icon-512.png','./manifest.webmanifest'];
 self.addEventListener('install',ev=>ev.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));

@@ -1,46 +1,25 @@
-BIA BARROS — PRODUÇÃO DE ESTRADA
-Aplicativo web para publicar no GitHub Pages
+BIA BARROS PRODUÇÕES — VERSÃO DO PRINT (PRETO E LARANJA)
 
-ARQUIVOS
-index.html (página inicial)
-app.js (funcionalidades)
-style.css (aparência preta e laranja)
-logo.png (logo da Bia Barros com fundo transparente)
-icon.png, icon-512.png (ícones do aplicativo)
-manifest.webmanifest e sw.js (instalação e uso com cache)
+Feito a partir do ZIP original Bia_Barros_Producao_GitHub(1).zip enviado nesta conversa.
+Mantém o layout laranja/preto da tela "Visão geral", com logo dourada Bia Barros,
+novos shows, agenda, listas, cronograma, riders e contatos.
 
-COMO PUBLICAR NO GITHUB PAGES
-1. Crie um repositório novo no GitHub e deixe como Public.
-2. Abra o ZIP e extraia TODOS os arquivos. Não envie apenas o ZIP ao repositório.
-3. No repositório, escolha Add file > Upload files.
-4. Selecione TODOS os arquivos extraídos, diretamente na raiz (mesmo nível do index.html), e confirme em Commit changes.
-5. Entre em Settings > Pages.
-6. Em Build and deployment: Deploy from a branch; branch main; pasta /(root). Salve.
-7. O GitHub Pages mostrará o endereço onde o aplicativo foi publicado.
+ACRÉSCIMOS
+- Anotações importantes por categoria, pesquisa, edição e destaque.
+- Personalização de páginas, categorias e campos de shows.
+- Login Supabase e sincronização com a mesma conta em aparelhos diferentes.
+- PDFs em armazenamento privado quando a conta está conectada.
+- Melhorias de nitidez da imagem original (sem trocar as cores), ícone e área segura do iPhone.
 
-PARA USAR NO IPHONE
-Abra o endereço do site no Safari e use Compartilhar > Adicionar à Tela de Início.
+PUBLICAR
+1. Antes de substituir, no app atual exporte um BACKUP da agenda no aparelho que tem os shows.
+2. Extraia o conteúdo deste ZIP para a raiz do repositório GitHub Pages existente.
+3. Substitua todos os arquivos correspondentes e faça commit na branch publicada.
+4. O site atual só mudará depois do deploy. Reabra o app instalado se estiver cacheado.
+5. Entre na mesma conta em todos os aparelhos para habilitar sincronização.
+6. Confirme os shows e anotações em dois aparelhos antes de editar simultaneamente.
 
-O QUE FUNCIONA
-- Agenda de shows com data, cidade, estado, local, endereço e horários.
-- Contatos fixos de Mimi e Ju e contatos de locadora / cerimonial por evento.
-- WhatsApp direto quando o telefone estiver cadastrado.
-- Checklist editável por show: 7 dias, 3 dias, véspera e dia do evento.
-- Cronograma da equipe editável e compartilhável por WhatsApp.
-- Upload, consulta e remoção de PDFs de riders por evento.
-- Exportação de compromissos/lembretes em arquivo .ics para Calendário.
-- Backup completo de dados e PDFs em arquivo JSON, e importação desse backup.
-- Visual preto e laranja, com logo sem fundo, sem módulo financeiro.
-
-IMPORTANTE
-- Os dados e PDFs ficam salvos localmente no navegador/aparelho usado.
-  Não há conta de usuário nem sincronização na nuvem nesta versão.
-- Limpar os dados do Safari ou trocar de celular pode apagar informações.
-  Faça backup regularmente na aba Ajustes e backup.
-- As notificações NÃO são enviadas automaticamente em segundo plano.
-  Para receber alertas, exporte o arquivo .ics do show, importe no
-  Calendário do iPhone e mantenha as notificações do Calendário ativadas.
-- A publicação no GitHub Pages exige um repositório com os arquivos do site.
-- Para visualizar tudo funcionando, use um servidor HTTPS (GitHub Pages).
-
-VERSÃO: primeira versão funcional para publicação / 18-11-2026
+ATENÇÃO
+Se os dois shows do print existem apenas no armazenamento do navegador,
+eles não estão neste ZIP: não limpe dados do navegador e faça backup primeiro.
+As funções de sincronização exigem publicação e teste com login no serviço Supabase.
