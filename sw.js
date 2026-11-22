@@ -1,4 +1,4 @@
-const VERSION='bia-barros-producao-listas-itens-v11';
+const VERSION='bia-barros-producao-iconblack-v12';
 const BASE=self.registration.scope;
 const FILES=['./','./index.html','./app.js','./style.css','./logo.png','./icon.png','./icon-512.png','./icon-1024.png','./apple-touch-icon.png','./manifest.webmanifest'];
 self.addEventListener('install',ev=>ev.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
