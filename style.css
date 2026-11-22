@@ -35,3 +35,18 @@
   .bottom-nav button{min-width:0;flex:initial;font-size:10px;padding-left:2px;padding-right:2px}
 }
 @media(max-width:600px){.feature-tools .btn{flex:1 1 170px}.hero-logo{max-height:180px}}
+
+/* Anotações como lista de conferência no local */
+.note-checklist{display:flex!important;flex-direction:column;gap:12px}
+.note-checklist .note-card{width:100%;gap:10px;transition:opacity .2s ease,background .2s ease}
+.note-check-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.note-check-label{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;font-weight:600;color:#ffbd83}
+.note-check-label input{width:23px;height:23px;accent-color:#f58b29;cursor:pointer;flex-shrink:0}
+.note-checklist .note-card .note-body{margin:8px 0 10px}
+.note-checklist .note-card h3{margin:4px 0}
+.note-checklist .note-card.note-done{opacity:.48}
+.note-checklist .note-card.note-done .note-details{text-decoration:line-through;text-decoration-color:#b4a49b}
+.note-checklist .note-card.note-done .note-check-label{color:#d7c4b6}
+
+/* Listas de conferência por assunto */
+.note-checklist{display:flex;flex-direction:column;gap:12px}.note-checklist .note-card{width:100%;opacity:1}.note-checklist .note-check-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.note-items{display:flex;flex-direction:column;gap:4px;margin:12px 0}.note-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 8px;border-bottom:1px solid rgba(128,128,128,.16)}.note-item-label{display:flex;align-items:center;gap:12px;flex:1;min-width:0;cursor:pointer}.note-item-label input{width:20px;height:20px;flex-shrink:0;accent-color:var(--orange)}.note-item-label span{overflow-wrap:anywhere}.note-item-done .note-item-label span{opacity:.42;text-decoration:line-through}.note-item .inline-actions{flex-shrink:0}.note-item .inline-actions button{padding:6px 8px}.note-card .note-body{white-space:normal}
