@@ -441,7 +441,10 @@
   $('#modal').addEventListener('close',()=>{$('#modal-form').onsubmit=null;});
   // Account-scoped cloud synchronization; local editing stays possible during outages.
   if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
-  render();initCloud().catch(console.warn);
+  render();
+  window.addEventListener('supabase-sdk-ready',()=>initCloud().catch(e=>{console.error('Erro ao conectar à nuvem:',e);toast('Falha ao conectar: '+(e.message||e));}));
+  window.addEventListener('supabase-sdk-error',()=>{toast('Biblioteca da nuvem bloqueada. Verifique bloqueadores de conteúdo ou a rede.');updateStatus();});
+  if(window.__cloudSdkStatus==='ready'||window.supabase?.createClient)initCloud().catch(console.warn);
   window.addEventListener('storage',ev=>{if(ev.key===KEY && !pendingRemote){try{state=JSON.parse(ev.newValue)||defaultState();ensureState();render();}catch{}}});
   // As the renderer replaces PDF cards, refresh them after any page render.
 })();

@@ -30,7 +30,7 @@
       <div class="side-footer">BIA BARROS<br/><small>Produção organizada, show tranquilo.</small></div>
     </aside>
     <main class="main">
-      <header class="topbar"><div><span class="eyebrow">BIA BARROS • PRODUÇÃO</span><h1 id="page-title">Visão geral</h1></div><button id="top-add" class="btn primary">＋ Novo show</button></header>
+      <header class="topbar"><div><span class="eyebrow">BIA BARROS • PRODUÇÃO</span><h1 id="page-title">Visão geral</h1></div><div class="top-actions"><button id="cloud-status" class="cloud-pill" data-action="go-ajustes" type="button">☁ Entrar</button><button id="top-add" class="btn primary">＋ Novo show</button></div></header>
       <div id="content" aria-live="polite"></div>
     </main>
     <nav class="bottom-nav" aria-label="Menu inferior">
@@ -44,6 +44,24 @@
   </div>
   <dialog id="modal"><form id="modal-form" method="dialog"><div class="modal-head"><h2 id="modal-title"></h2><button type="button" id="close-modal" class="close" aria-label="Fechar">×</button></div><div id="modal-body"></div><div id="modal-actions"></div></form></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
+  <script>
+  // Tenta dois provedores: falha de CDN não deve bloquear o login.
+  window.__cloudSdkStatus = 'loading';
+  (function loadSupabase(){
+    const sources = [
+      'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js',
+      'https://unpkg.com/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js'
+    ];
+    let index=0;
+    function next(){
+      if(index>=sources.length){window.__cloudSdkStatus='failed';window.dispatchEvent(new Event('supabase-sdk-error'));return;}
+      const s=document.createElement('script');s.src=sources[index++];
+      s.onload=()=>{if(window.supabase?.createClient){window.__cloudSdkStatus='ready';window.dispatchEvent(new Event('supabase-sdk-ready'));}else next();};
+      s.onerror=next;document.head.appendChild(s);
+    }
+    next();
+  })();
+</script>
   <script src="./app.js" defer></script>
 </body>
 </html>
